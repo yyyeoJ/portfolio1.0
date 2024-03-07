@@ -252,7 +252,7 @@ hr{
 }
 .contact-me{
     display:flex;
-    z-index:3;
+    z-index:2;
     flex-direction: column;
     gap:1vw;
     align-items: center;
@@ -285,7 +285,7 @@ hr{
 
 .projects{
     width:100%;
-    height:65vw;
+    height:80vw;
     background-color:#22262A;
     color:white;
     font-size:2vw;
@@ -305,6 +305,7 @@ hr{
 }
 .title>hr{
     bottom:-1vw;
+    margin-bottom:5rem;
 }
 
 .project-container{
@@ -337,6 +338,7 @@ hr{
     align-items: center;
     margin-top:16vw;
     opacity: 0;
+    position: relative;
 }
 .showbuttons{
     transition: 0.2s ease-in-out !important;
@@ -353,7 +355,6 @@ hr{
 
 .project-buttons>p{
     margin-left:3vw;
-    margin-right:8vw;
 }
 .project-buttons>button{
     font-family: 'Oswald', sans-serif;
@@ -362,6 +363,8 @@ hr{
     height:2vw;
     margin-top:0.5vw;
     cursor: pointer;
+    position: absolute;
+    right:3rem;
 }
 .project-buttons>button>a{
     color:black;
@@ -395,31 +398,12 @@ hr{
     80%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82), 0px 0px 13px 1px #000000;}
 }
 
+.project{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
-.project1{
-    background-image: url(../img/tributepage.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.project2{
-    background-image: url(../img/surveypage.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.project3{
-    background-image: url(../img/productpage.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.project4{
-    background-image: url(../img/portfoliopage.png);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
 .showmodal{
     opacity:100 !important;
     transition: 0.4s ease-in-out;
@@ -815,7 +799,6 @@ hr{
 
 .project-buttons>p{
     margin-left:3vw;
-    margin-right:8vw;
     text-shadow: none;
 }
 .project-buttons>button{
@@ -861,30 +844,6 @@ hr{
 }
 
 
-.project1{
-    background-image: url(../img/tributepage.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.project2{
-    background-image: url(../img/surveypage.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.project3{
-    background-image: url(../img/productpage.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.project4{
-    background-image: url(../img/portfoliopage.png);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
 .showmodal{
     opacity:100 !important;
     transition: 0.4s ease-in-out;
@@ -1170,7 +1129,6 @@ hr{
     
     .project-buttons>p{
         margin-left:3vw;
-        margin-right:8vw;
         text-shadow: none;
         font-size:3vw;
     }
