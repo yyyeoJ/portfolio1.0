@@ -1,8 +1,8 @@
+/*------------------------------------ All of the site -------------------------------------*/
 *{
-    padding:0;
     margin:0;
+    padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 body{
     font-family: 'Oswald', sans-serif;
@@ -12,9 +12,14 @@ body{
     flex-direction: column;
     
 }
-p{
-    text-shadow: 5px 4px 4px #000000;
+p{text-shadow: 5px 4px 4px #000000;}
+
+a, a:link,a:visited,a:active{
+    text-decoration: none;
+    color:white;
 }
+
+/*------------------------------------ Header -------------------------------------*/
 .header{
     width:100%;
     height:3vw;
@@ -22,12 +27,13 @@ p{
     display:flex;
     align-items: center;
     justify-content: center;
-    gap:65vw;
     position: relative;
     z-index:100;
     
 }
 .languages{
+    position: absolute;
+    left:5rem;
     display:flex;
     flex-direction: row;
     align-items:center;
@@ -45,14 +51,14 @@ p{
     border:rgb(235, 182, 36) solid 0.2vw !important;
 }
 .nav{
+    position: absolute;
+    right:5rem;
     display: flex;
     flex-direction: row;
     font-size:1.5vw;
     color:white;
     gap:0vw;
-    position: relative;
 }
-
 .nav>a>div{
     height:3vw;
     position: relative;
@@ -61,8 +67,6 @@ p{
     align-items: center;
     justify-content: center;
 }
-
-
 .nav span{
     position: absolute;
     background-color:#017c3d;
@@ -71,31 +75,17 @@ p{
     width:100%;
     z-index:-1;
     height:0%;
-    
-    
 }
 .navon{
     animation:navon 0.4s;
     animation-fill-mode: forwards;
 }
-@keyframes navon{
-    100%{height:100%;}
-}
 .navoff{
     animation:navoff 0.1s;
     animation-fill-mode: forwards;
 }
-@keyframes navoff{
-    0%{height:100%;}
-    100%{height:0%;}
-}
 
-
-
-a, a:link,a:visited,a:active{
-    text-decoration: none;
-    color:white;
-}
+/*------------------------------------ Hamburger nav -------------------------------------*/
 .hamburger-nav-button{
     pointer-events: none;
     width:7vw;
@@ -156,15 +146,6 @@ a, a:link,a:visited,a:active{
     height:9vw;
     text-align: center;
 }
-
-@keyframes shownav{
-    0%{transform:translateY(-50vw);}
-    100%{transform:translateY(0vw);}
-}
-@keyframes hidenav{
-    0%{transform:translateY(0vw);}
-    100%{transform:translateY(-50vw);}
-}
 .hamburger-nav-background{
     position: absolute;
     opacity:0;
@@ -193,9 +174,7 @@ a, a:link,a:visited,a:active{
     animation-fill-mode:both !important;
 }
 
-
-
-
+/*------------------------------------ About section -------------------------------------*/
 .main{
     width:100%;
     height: auto; 
@@ -214,7 +193,6 @@ a, a:link,a:visited,a:active{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     color:white;
     font-size:2vw;
 }
@@ -261,7 +239,6 @@ hr{
 .zindex{
     z-index:0;
 }
-
 .contacts{
     display:flex;
     text-align: center;
@@ -283,6 +260,7 @@ hr{
     transform: translateY(-1vw);
 }
 
+/*------------------------------------ Projects -------------------------------------*/
 .projects{
     width:100%;
     height:80vw;
@@ -330,6 +308,9 @@ hr{
     height: 20vw;
     box-shadow: 0px 0px 12px 3px #000000;
     transition: 0.4s ease-in-out;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .project-buttons{
     display:flex;
@@ -355,6 +336,7 @@ hr{
 
 .project-buttons>p{
     margin-left:3vw;
+    text-shadow: none;
 }
 .project-buttons>button{
     font-family: 'Oswald', sans-serif;
@@ -382,28 +364,8 @@ hr{
     background-size:100%;
 
 }
-@keyframes shadowon{
-    0%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82),0px 0px 13px 1px #000000;}
-    20%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82),0px 0px 13px 1px #000000;}
-    40%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82),0px 0px 13px 1px #000000;}
-    60%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82),0px 0px 13px 1px #000000;}
-    80%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82),0px 0px 13px 1px #000000;}
-    100%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82),0px 0px 13px 1px #000000;}
-}
-@keyframes shadowoff{
-    0%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82), 0px 0px 13px 1px #000000;}
-    20%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82), 0px 0px 13px 1px #000000;}
-    40%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82), 0px 0px 13px 1px #000000;}
-    60%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82), 0px 0px 13px 1px #000000;}
-    80%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82), 0px 0px 13px 1px #000000;}
-}
 
-.project{
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
+/*------------------------------------ Modal -------------------------------------*/
 .showmodal{
     opacity:100 !important;
     transition: 0.4s ease-in-out;
@@ -416,16 +378,6 @@ hr{
 }
 .showmodal-popout{
     animation: popout 0.5s;
-}
-@keyframes popup{
-    0%{transform: scale(0.4);}
-    50%{transform: scale(1.1);}
-    100%{transform: scale(1);}
-}
-@keyframes popout{
-    0%{transform: scale(1);}
-    25%{transform: scale(1.1);}
-    80%{transform: scale(0);}
 }
 
 .modal-background{
@@ -536,7 +488,7 @@ hr{
     width:100%;
     height:13vw;
     margin-bottom:0.5vw;
-    overflow-y: scroll;
+    overflow-y:auto;
     padding:0.2vw 0.2vw 0.2vw 0;
 }
 .modal-buttons{
@@ -562,6 +514,12 @@ hr{
     overflow-y: hidden;
 }
 
+
+
+
+
+/*------------------------------------ Footer -------------------------------------*/
+
 .footer{
     
     font-family: 'Inconsolata', monospace;
@@ -576,7 +534,11 @@ hr{
 .footer>p{
     text-shadow: none;
 }
-@media(max-width:1500px){
+
+
+
+/*------------------------------------ Media queries -------------------------------------*/
+@media(max-width:1400px){
     .header{
         height:5vw;
         gap:60vw;
@@ -597,12 +559,6 @@ hr{
     .about{
         height:65vw;
     }
-    .footer{
-        height:5vw;
-    }
-
-}
-@media(max-width:1400px){
     .modal{
         width:70vw;
         height:40vw;
@@ -642,18 +598,27 @@ hr{
         height:2vw;
         font-size:1.5vw;
     }
+
+    .footer{
+        height:5vw;
+    }
 }
+
 @media(min-width:1001px){
     .hamburger-nav{
         opacity:0 !important;
     }
 }
 
+
 @media(max-width:1000px){
     .header{
         height:7vw;
         gap:60vw;
         
+    }
+    .languages{
+        left:2rem;
     }
     .languages>a>img{
         width:6vw;
@@ -673,6 +638,9 @@ hr{
         align-items: center;
         justify-content: center;
     }
+    .selectedlang{
+        border:rgb(235, 182, 36) solid 0.4vw !important;
+    }
     .hamburger-nav-button{
         opacity:100;
         pointer-events: all;
@@ -683,18 +651,12 @@ hr{
     .hamburger-nav{
         opacity:0;
     }
-
-    .selectedlang{
-        border:rgb(235, 182, 36) solid 0.4vw !important;
-    }
     .about{
         height: 90vw;
         font-size:4vw;
         display: flex;
     }
     .about-container{
-        display: flex;
-        flex-direction: row;
         gap:5vw;
         height:45vw;
         align-items: center;
@@ -721,394 +683,39 @@ hr{
         flex-direction: column;
         align-items: center;
     }
-    .contact{
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        gap:0.5vw;
-        height:5vw;
-        transition: 0.4s ease-in-out;
-    }
-    .contact:hover{
-        transform: translateY(-1vw);
-    }
     .contact-me{
         position: relative;
         bottom:5vw;
     }
-    
     .projects{
-    height:auto;
-    font-size:3vw;
-
-}
-.title>hr{
-    bottom:0vw;
-}
-
-.project-container{
-    height:auto;
-    width:100%;
-    flex-direction: column;
-    padding-top:2vw;
-    gap:0vw;
-}
-.row{
-    flex-direction: column;
-    height:70vw;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:5vw;
-}
-.project{
-    width:55vw;
-    height: 30vw;
-    box-shadow: 0px 0px 12px 3px #000000;
-    transition: 0.4s ease-in-out;
-    position: relative;
-}
-.project-buttons{
-    display:flex;
-    position: absolute;
-    flex-direction: row;
-    gap:1vw;
-    align-items: center;
-    justify-content: center;
-    width:100%;
-    bottom:0vw;
-    height:8vw;
-    opacity: 0;
-    background-color: #82909E;
-    color:#22262A;
-    z-index:1;
-    opacity: 100;
-}
-.showbuttons{
-    transition: none;
-    opacity:100 !important;
-    pointer-events: all !important;
-    z-index:1;
-}
-.hidebuttons{
-    transition: none;
-    opacity:100 !important;
-    pointer-events: all !important;
-    z-index:1;
-}
-
-.project-buttons>p{
-    margin-left:3vw;
-    text-shadow: none;
-}
-.project-buttons>button{
-    font-family: 'Oswald', sans-serif;
-    font-size:2vw;
-    width:15vw;
-    margin-top:0px;
-    height:6vw;
-    color:white;
-    background-color:#22262A;
-    border:none;
-}
-.project-buttons>button:hover{
-    background-color:#1c1f22;
-}
-
-.projecthoveron{
-    animation: none;
-    animation-fill-mode: both;
-    background-size:100% !important;
-    transition: all 0.4s ease-in-out;
-}
-.projecthoveroff{
-    animation: none;
-    background-size:100%;
-
-}
-@keyframes shadowon{
-    0%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82);}
-    20%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82);}
-    40%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82);}
-    60%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82);}
-    80%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82);}
-    100%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82);}
-}
-@keyframes shadowoff{
-    0%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82);}
-    20%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82);}
-    40%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82);}
-    60%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82);}
-    80%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82);}
-    100%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82);}
-}
-
-
-.showmodal{
-    opacity:100 !important;
-    transition: 0.4s ease-in-out;
-    z-index:10;
-    pointer-events: all !important;
-}
-
-.showmodal-popup{
-    animation: popup 0.5s;
-}
-.showmodal-popout{
-    animation: popout 0.5s;
-}
-@keyframes popup{
-    0%{transform: scale(0.4);}
-    50%{transform: scale(1.1);}
-    100%{transform: scale(1);}
-}
-@keyframes popout{
-    0%{transform: scale(1);}
-    25%{transform: scale(1.1);}
-    80%{transform: scale(0);}
-}
-
-.modal-background{
-    z-index:2;
-}
-.modal{
-    overflow:scroll;
-    width:82%;
-    height:95vh;
-    background-color: #343A41;
-    box-shadow: 0px 0px 12px 3px #000000;
-    display:flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items:center;
-    position: relative;
-}
-.exit{
-    position:relative;
-    align-self: end;
-    border:none;
-    z-index:10;
-    cursor: pointer;
-    font-size:6vw;
-    background-color:rgba(128, 128, 128, 0);
-    color:#94A4B4;
-}
-.exit:hover{
-    color:white;
-}
-
-
-.modal-info>h3{
-    color:#94A4B4;
-    font-size:4vw;
-    font-family: 'Oswald', sans-serif;
-}
-.modal-info>h2{
-    font-size:5vw;
-    color:white;
-    font-family: 'Oswald', sans-serif;
-}
-.modal-about>p{
-    font-size:3.5vw;
-    font-family: 'Inconsolata', monospace;
-    text-shadow: none;
-    color:#94A4B4;
-}
-
-.modal-technologies{
-    width:100%;
-    margin-top:0.2vw;
-    height:10vw;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap:0.5vw;
-    overflow:auto;
-}
-
-.modal-technologies>div{
-    font-size:3vw;
-    font-family: 'Oswald', sans-serif;
-    text-shadow: none;
-    color:#94A4B4;
-    border:2px solid #22262A;
-    width:auto;
-    height:5vw;
-    padding:0.5vw;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-image{
-    height:50vw;
-    width:90%;
-    padding-top:1vw;
-    position: relative;
-    
-}
-.modal-image>img{
-    width:100%;
-    height:40vw;
-    border:10px solid #22262A;
-    
-}
-
-.modal-info{
-    height:40vh;
-    width:80vw;
-    padding:0.9vw;
-    overflow: show;
-    
-}
-.modal-about{
-    width:100%;
-    height:auto;
-    margin-bottom:0.5vw;
-    padding:0.2vw 0.2vw 0.2vw 0;
-}
-.modal-buttons{
-    display:flex;
-    flex-direction: row;
-    gap:1vw;
-    padding-bottom:2vw;
-    padding-top:1vw;
-}
-.modal-buttons>button{
-    font-family: 'Oswald', sans-serif;
-    font-size:4vw;
-    width:35vw;
-    margin:auto;
-    height:7vw;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap:0.3vw;
-}
-.modal-buttons>button>a{
-    color:black;
-}
-.scrollock{
-    overflow-y: hidden;
-}
-
-}
-
-@media(max-width:650px){
-    .header{
-        height:10vw;
-        gap:30vw;
-        z-index:100;
-        
-    }
-    .languages{
-        gap:5vw;
-    }
-    .languages>a>img{
-        width:10vw;
-        height: 6vw;
-    }
-    .nav{
+        height:auto;
         font-size:3vw;
-        gap:4vw;
+    
     }
-    .nav>a>div{
-        height:5vw;
-        width:8vw;
+    .title>hr{
+        bottom:0vw;
     }
 
-    .about{
-        height: 95vh;
-        flex-direction: column;
-        gap:2vw;
-        position: relative;
-        display:flex;
-        align-items: center;
-    }
-    .about-container{
-        display: flex;
-        position: relative;
-        bottom:-2vw;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap:0vw;
-        height:auto;
-        font-size:6vw;
-    }
-    .about-image>img{
-        height:30vw;
-    }
-    .about-text{
-        justify-content: center;
-        align-items: center;
-    }
-    .hr-div{
-        position: relative;
-        bottom:-8vw;
-        height:5vw;
-    }
-    .contact-me{
-        height:auto;
-        position: relative;
-        bottom:-1vw;
-        margin-bottom:5vw;
-        align-items: center;
-        justify-content: start;
-        font-size:6vw;
-    }
-    .contacts{
-        gap:8vw;
-        flex-direction: column;
-        align-items: center;
-    }
-    .contact{
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        gap:0.5vw;
-        height:5vw;
-        transition: 0.4s ease-in-out;
-    }
     .project-container{
         height:auto;
-        width:100%;
-        flex-direction: column;
         padding-top:2vw;
-        padding-bottom:2vw;
-        gap:5vw;
+        gap:0vw;
     }
     .row{
         flex-direction: column;
-        height:110vw;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        gap:7vw;
+        height:70vw;
     }
-
     .project{
-        width:85vw;
-        height: 50vw;
-        box-shadow: 0px 0px 12px 3px #000000;
-        transition: 0.4s ease-in-out;
+        width:55vw;
+        height: 30vw;
         position: relative;
     }
-    .projects{
-        height:auto;
-    }
     .project-buttons{
-        display:flex;
         position: absolute;
-        flex-direction: row;
-        gap:1vw;
-        align-items: center;
         justify-content: center;
         width:100%;
         bottom:0vw;
         height:8vw;
-        opacity: 0;
         background-color: #82909E;
         color:#22262A;
         z-index:1;
@@ -1126,154 +733,283 @@ hr{
         pointer-events: all !important;
         z-index:1;
     }
-    
-    .project-buttons>p{
-        margin-left:3vw;
-        text-shadow: none;
-        font-size:3vw;
-    }
+
     .project-buttons>button{
-        font-family: 'Oswald', sans-serif;
-        font-size:3vw;
-        width:25vw;
+        font-size:2vw;
+        width:15vw;
         margin-top:0px;
-        height:7vw;
+        height:6vw;
         color:white;
         background-color:#22262A;
         border:none;
     }
-    .project-buttons>button:hover{
-        background-color:#1c1f22;
-    }
 
+    .projecthoveron{
+        animation: none;
+        background-size:100% !important;
+    }
+    .projecthoveroff{
+        animation: none;
+        background-size:100%;
+
+    }
 
     .modal-background{
         z-index:2;
     }
     .modal{
         overflow:scroll;
-        width:100%;
-        height:100vh;
-        background-color: #343A41;
-        box-shadow: 0px 0px 12px 3px #000000;
-        display:flex;
+        width:82%;
+        height:95vh;
         flex-direction: column;
         justify-content: start;
-        align-items:center;
-        padding-left:0vw;
-        position: relative;
     }
     .exit{
-        
-        right:1vw;
-        top:0.5vw;
+        position:relative;
+        align-self: end;
         border:none;
         z-index:10;
-        cursor: pointer;
-        font-size:7vw;
-        background-color:rgba(128, 128, 128, 0);
-        color:#94A4B4;
+        font-size:6vw;
     }
-    .exit:hover{
-        color:white;
-    }
-    
-    
+
+
     .modal-info>h3{
-        color:#94A4B4;
-        font-size:5vw;
-        font-family: 'Oswald', sans-serif;
+        font-size:4vw;
     }
     .modal-info>h2{
-        font-size:6vw;
-        color:white;
-        font-family: 'Oswald', sans-serif;
+        font-size:5vw;
     }
     .modal-about>p{
-        font-size:4vw;
-        font-family: 'Inconsolata', monospace;
-        text-shadow: none;
-        color:#94A4B4;
+        font-size:3.5vw;
     }
-    
+
     .modal-technologies{
-        width:100%;
-        margin-top:0.2vw;
         height:10vw;
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap:0.5vw;
-        overflow:auto;
     }
-    
+
     .modal-technologies>div{
         font-size:3vw;
-        font-family: 'Oswald', sans-serif;
-        text-shadow: none;
-        color:#94A4B4;
-        border:2px solid #22262A;
-        width:auto;
         height:5vw;
-        padding:0.5vw;
-        display:flex;
-        align-items: center;
-        justify-content: center;
     }
-    
+
     .modal-image{
-        height:55vw;
-        width:100vw;
-        
+        height:50vw;
+        width:90%;
+        padding-top:1vw;
         position: relative;
         
     }
     .modal-image>img{
-        width:100vw;
-        height:55vw;
-        border:10px solid #22262A;
+        width:100%;
+        height:40vw;
         
     }
-    
+
     .modal-info{
-        height:auto;
-        width:100vw;
+        height:40vh;
+        width:80vw;
         padding:0.9vw;
         overflow: show;
         
     }
     .modal-about{
-        width:100%;
-        height:50vw;
-        margin-bottom:0.5vw;
-        padding:0.2vw 0.2vw 0.2vw 0;
+        height:auto;
     }
     .modal-buttons{
-        display:flex;
-        flex-direction: row;
-        justify-self: flex-end;
-        align-self: flex-end;
-        gap:1vw;
+        padding-bottom:2vw;
+        padding-top:1vw;
     }
     .modal-buttons>button{
-        font-family: 'Oswald', sans-serif;
         font-size:4vw;
-        width:50vw;
+        width:35vw;
         margin:auto;
+        height:7vw;
+    }
+}
+
+@media(max-width:650px){
+    .header{
         height:10vw;
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
+        gap:30vw;
+        z-index:100;
+        
+    }
+    .languages{
+        gap:2vw;
+        left:1rem;
+    }
+    .languages>a>img{
+        width:6vw;
+        height: 4vw;
+    }
+    .nav{
+        font-size:3vw;
+        gap:4vw;
+    }
+    .nav>a>div{
+        height:5vw;
+        width:8vw;
+    }
+    
+
+
+    .about{
+        height: 95vh;
+        gap:2vw;
+        position: relative;
+    }
+    .about-container{
+        bottom:-2vw;
+        flex-direction: column;
+        gap:0vw;
+        height:auto;
+        font-size:6vw;
+    }
+    .about-image>img{
+        height:30vw;
+    }
+    .about-text{
         align-items: center;
-        gap:0.3vw;
     }
-    .modal-buttons>button>a{
-        color:black;
+    .hr-div{
+        bottom:-8vw;
+        height:5vw;
     }
-    .scrollock{
-        overflow-y: hidden;
+    .contact-me{
+        height:auto;
+        position: relative;
+        bottom:-1vw;
+        margin-bottom:5vw;
+        justify-content: start;
+        font-size:6vw;
+    }
+    .contacts{
+        gap:8vw;
+    }
+    .project-container{
+        height:auto;
+        padding-top:2vw;
+        padding-bottom:2vw;
+        gap:5vw;
+    }
+    .row{
+        height:110vw;
+        gap:7vw;
     }
 
+    .project{
+        width:85vw;
+        height: 50vw;
+    }
+    
+    .project-buttons>p{
+        font-size:3vw;
+    }
+    .project-buttons>button{
+        font-size:3vw;
+        width:25vw;
+        margin-top:0px;
+        height:7vw;
+    }
+    .project-buttons>button:hover{
+        background-color:#1c1f22;
+    }
 
+    .modal{
+        width:100%;
+        height:100vh;
+        padding-left:0vw;
+    }
+    .exit{
+        font-size:7vw;
+    }
+    
+    .modal-info>h3{
+        font-size:5vw;
+    }
+    .modal-info>h2{
+        font-size:6vw;
+    }
+    .modal-about>p{
+        font-size:4vw;
+    }
+    
+    .modal-technologies{
+        height:10vw;
+    }
+    
+    .modal-technologies>div{
+        font-size:3vw;
+        height:5vw;
+    }
+    
+    .modal-image{
+        height:55vw;
+        width:100vw;
+    }
+    .modal-image>img{
+        width:100vw;
+        height:55vw;
+    }
+    
+    .modal-info{
+        height:auto;
+        width:100vw;
+        
+    }
+    .modal-about{
+        height:50vw;
+    }
+    .modal-buttons{
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+    .modal-buttons>button{
+        width:50vw;
+        height:10vw;
+    }
+}
 
+/*------------------------------------ Keyframes -------------------------------------*/
+
+@keyframes navon{
+    100%{height:100%;}
+}
+@keyframes navoff{
+    0%{height:100%;}
+    100%{height:0%;}
+}
+@keyframes shownav{
+    0%{transform:translateY(-50vw);}
+    100%{transform:translateY(0vw);}
+}
+@keyframes hidenav{
+    0%{transform:translateY(0vw);}
+    100%{transform:translateY(-50vw);}
+}
+@keyframes shadowon{
+    0%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82);}
+    20%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82);}
+    40%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82);}
+    60%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82);}
+    80%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82);}
+    100%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82);}
+}
+@keyframes shadowoff{
+    0%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82);}
+    20%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82);}
+    40%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82);}
+    60%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82);}
+    80%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82);}
+    100%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82);}
+}
+@keyframes popup{
+    0%{transform: scale(0.4);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+@keyframes popout{
+    0%{transform: scale(1);}
+    25%{transform: scale(1.1);}
+    80%{transform: scale(0);}
 }
