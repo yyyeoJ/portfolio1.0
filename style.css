@@ -263,7 +263,7 @@ hr{
 /*------------------------------------ Projects -------------------------------------*/
 .projects{
     width:100%;
-    height:80vw;
+    height:auto;
     background-color:#22262A;
     color:white;
     font-size:2vw;
@@ -271,6 +271,7 @@ hr{
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-bottom:1rem;
 
 }
 .title{
@@ -287,7 +288,7 @@ hr{
 }
 
 .project-container{
-    height:65vw;
+    height:auto;
     width:100%;
     display:flex;
     flex-direction: column;
@@ -295,13 +296,16 @@ hr{
 }
 .row{
     width:100%;
-    height:25vw;
+    height:auto;
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:5vw;
+    gap:2rem;
     overflow: hidden;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+
 }
 .project{
     width:36vw;
@@ -610,7 +614,6 @@ hr{
     }
 }
 
-
 @media(max-width:1000px){
     .header{
         height:7vw;
@@ -690,6 +693,7 @@ hr{
     .projects{
         height:auto;
         font-size:3vw;
+        padding-bottom:5rem;
     
     }
     .title>hr{
@@ -703,7 +707,10 @@ hr{
     }
     .row{
         flex-direction: column;
-        height:70vw;
+        height:auto;
+        padding-bottom:1rem;
+        padding-top:1rem;
+        gap:2rem;
     }
     .project{
         width:55vw;
@@ -720,6 +727,11 @@ hr{
         color:#22262A;
         z-index:1;
         opacity: 100;
+        box-shadow: 0px 0px 12px 3px #000000;
+    }
+    .project-buttons>p{
+        position: absolute;
+        left:0rem;
     }
     .showbuttons{
         transition: none;
@@ -923,7 +935,9 @@ hr{
     .exit{
         font-size:7vw;
     }
-    
+    .modal-info{
+        padding:1rem;
+    }
     .modal-info>h3{
         font-size:5vw;
     }
