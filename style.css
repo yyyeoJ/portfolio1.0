@@ -1,6 +1,5 @@
 /* TODO: change vw vh px to rem */
 /* TODO: improve loading speed */
-/* TODO: Hungarian version */
 
 /*------------------------------------ All of the site -------------------------------------*/
 *{
@@ -62,12 +61,14 @@ a, a:link,a:visited,a:active{
     flex-direction: row;
     font-size:1.5vw;
     color:#F0F7EE;
-    gap:0vw;
+    gap:1rem;
 }
 .nav>a>div{
     height:3vw;
     position: relative;
-    width:7vw;
+    width:auto;
+    padding-left:0.5rem;
+    padding-right: 0.5rem;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -557,11 +558,9 @@ hr{
     }
     .nav{
         font-size:2vw;
-        gap:0vw;
     }
     .nav>a>div{
         height:5vw;
-        width:8vw;
     }
     .about{
         height:65vw;
@@ -851,7 +850,6 @@ hr{
     }
     .nav{
         font-size:3vw;
-        gap:4vw;
     }
     .nav>a>div{
         height:5vw;
