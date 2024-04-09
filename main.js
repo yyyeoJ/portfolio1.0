@@ -1,18 +1,3 @@
-//Nav bar links hover animation
-const nav = document.querySelectorAll(".nav a");
-const navBackground = document.querySelectorAll(".nav span");
-
-nav.forEach(nav=>{
-    nav.addEventListener("mouseover",()=>{
-        nav.childNodes[0].childNodes[1].classList.remove("navoff")
-        nav.childNodes[0].childNodes[1].classList.add("navon")
-    })
-    nav.addEventListener("mouseout",()=>{
-        nav.childNodes[0].childNodes[1].classList.remove("navon")
-        nav.childNodes[0].childNodes[1].classList.add("navoff")
-    })
-})
-
 //Hamburger nav button & menu
 const body = document.querySelector("body");
 const hamburgerLink = document.querySelectorAll(".hamburgerlink");
@@ -20,21 +5,10 @@ const contactMe = document.querySelector(".contact-me")
 const hamburgerButton = document.querySelector(".hamburger-nav-button")
 const hamburgerBackground = document.querySelector(".hamburger-nav-background")
 const hamburgerNav = document.querySelector(".hamburger-nav")
-//const hamburgerSpan = document.querySelector(".hamburger-nav-button span");
 let open = false;
-
-// hamburgerButton.addEventListener("mouseover",()=>{
-//     hamburgerSpan.classList.remove("navoff")
-//     hamburgerSpan.classList.add("navon")
-// })
-// hamburgerButton.addEventListener("mouseout",()=>{
-//     hamburgerSpan.classList.remove("navon")
-//     hamburgerSpan.classList.add("navoff")
-// })
 
 hamburgerButton.addEventListener("click",()=>{
     body.classList.toggle("scrollock")
-    //contactMe.classList.toggle("zindex")
     if(open == false){
         hamburgerNav.classList.remove("hidehamburgernav");
         hamburgerNav.classList.add("showhamburgernav");
@@ -63,16 +37,6 @@ for(let i = 0; i<hamburgerLink.length; i++){
 
     })
 }
-
-// hamburgerButton.addEventListener("mouseover",()=>{
-//     hamburgerSpan.classList.remove("navoff")
-//     hamburgerSpan.classList.add("navon")
-// })
-// hamburgerButton.addEventListener("mouseout",()=>{
-//     hamburgerSpan.classList.remove("navon")
-//     hamburgerSpan.classList.add("navoff")
-// })
-
 //Projects hover display
 const project = document.querySelectorAll(".project");
 const projectButtons = document.querySelectorAll(".project-buttons");

@@ -1,3 +1,7 @@
+/* TODO: change vw vh px to rem */
+/* TODO: improve loading speed */
+/* TODO: Hungarian version */
+
 /*------------------------------------ All of the site -------------------------------------*/
 *{
     margin:0;
@@ -16,19 +20,19 @@ p{text-shadow: 5px 4px 4px #000000;}
 
 a, a:link,a:visited,a:active{
     text-decoration: none;
-    color:white;
+    color:#F0F7EE;
 }
 
 /*------------------------------------ Header -------------------------------------*/
 .header{
     width:100%;
     height:3vw;
-    background-color: #8b1b2a;
+    background-color: #731022;
     display:flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index:100;
+    z-index:2;
     
 }
 .languages{
@@ -45,10 +49,10 @@ a, a:link,a:visited,a:active{
     border:rgb(199, 199, 199) solid 0.2vw;
 }
 .languages>a>img:hover{
-    border:rgb(235, 182, 36) solid 0.2vw !important;
+    border:#FFBD00 solid 0.2vw !important;
 }
 .selectedlang{
-    border:rgb(235, 182, 36) solid 0.2vw !important;
+    border:#FFBD00 solid 0.2vw !important;
 }
 .nav{
     position: absolute;
@@ -56,7 +60,7 @@ a, a:link,a:visited,a:active{
     display: flex;
     flex-direction: row;
     font-size:1.5vw;
-    color:white;
+    color:#F0F7EE;
     gap:0vw;
 }
 .nav>a>div{
@@ -66,24 +70,15 @@ a, a:link,a:visited,a:active{
     display:flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s ease-in-out;
 }
-.nav span{
-    position: absolute;
-    background-color:#017c3d;
-    text-shadow: none;
-    color:rgba(255, 0, 0, 0);
-    width:100%;
-    z-index:-1;
-    height:0%;
+.nav>a>div:hover{
+    background-color:#22262A ;
 }
-.navon{
-    animation:navon 0.4s;
-    animation-fill-mode: forwards;
+.nav>a>div>p{
+    z-index:1;
 }
-.navoff{
-    animation:navoff 0.1s;
-    animation-fill-mode: forwards;
-}
+
 
 /*------------------------------------ Hamburger nav -------------------------------------*/
 .hamburger-nav-button{
@@ -100,7 +95,7 @@ a, a:link,a:visited,a:active{
     background-color: none;
     font-size:5vw;
     gap:1vw;
-    color:white;
+    color:#F0F7EE;
     background-color:rgba(0, 0, 0, 0);
     border:none;
     cursor: pointer;
@@ -108,7 +103,7 @@ a, a:link,a:visited,a:active{
 .hamburger1,
 .hamburger2,
 .hamburger3{
-    background-color: white;
+    background-color: #F0F7EE;
     width:5vw;
     height:0.5vw;
     border-radius: 5px;
@@ -124,7 +119,20 @@ a, a:link,a:visited,a:active{
 .hamburger-nav-button.open .hamburger3{
     transform: translateY(-1.5vw) rotate(45deg);
 }
-
+.hamburgerlink>div{
+    position: relative;
+    padding:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+.hamburgerlink>div:hover{
+    background-color: #22262A;
+}
+.hamburgerlink>div>p{
+    z-index:1;
+}
 .hamburger-nav{
     display:flex;
     gap:5vw;
@@ -133,12 +141,12 @@ a, a:link,a:visited,a:active{
     flex-direction: column;
     font-size:5vw;
     position: absolute;
-    background-color:#8b1b2a;
+    background-color:#8C1127;
     width:100%;
     height:50vw;
     top:7vw;
     opacity:0;
-    z-index:2
+    z-index:-1;
     
 }
 .hamburger-nav>a{
@@ -152,13 +160,13 @@ a, a:link,a:visited,a:active{
     width:100%;
     height:100%;
     background-color: rgba(0, 0, 0, 0.493);
-    z-index:0;
     transition: 0.1s ease-in-out;
+    z-index:-1;
 }
 
 .showhamburgerbackground{
     opacity:100 !important;
-    z-index:2;
+    z-index:1;
     
 }
 .showhamburgernav{
@@ -166,12 +174,15 @@ a, a:link,a:visited,a:active{
     opacity:100 !important;
     animation: shownav 0.5s !important;
     animation-fill-mode:both !important;
+    z-index:1;
 }
 .hidehamburgernav{
     pointer-events: none;
     opacity:100 !important;
     animation: hidenav 0.5s !important;
     animation-fill-mode:both !important;
+    transition: 1s ease-in-out;
+    z-index:-1;
 }
 
 /*------------------------------------ About section -------------------------------------*/
@@ -193,7 +204,7 @@ a, a:link,a:visited,a:active{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color:white;
+    color:#F0F7EE;
     font-size:2vw;
 }
 .about-container{
@@ -220,8 +231,8 @@ a, a:link,a:visited,a:active{
     flex-direction: column;
 }
 hr{
-    color:white;
-    background-color: white;
+    color:#F0F7EE;
+    background-color: #F0F7EE;
     position: relative;
     bottom:4vw;
     border-radius:30px;
@@ -230,14 +241,10 @@ hr{
 }
 .contact-me{
     display:flex;
-    z-index:2;
     flex-direction: column;
     gap:1vw;
     align-items: center;
     width:100%;
-}
-.zindex{
-    z-index:0;
 }
 .contacts{
     display:flex;
@@ -254,7 +261,6 @@ hr{
     gap:0.5vw;
     height:5vw;
     transition: 0.4s ease-in-out;
-    z-index:1;
 }
 .contact:hover{
     transform: translateY(-1vw);
@@ -265,7 +271,7 @@ hr{
     width:100%;
     height:auto;
     background-color:#22262A;
-    color:white;
+    color:#F0F7EE;
     font-size:2vw;
     display:flex;
     flex-direction: column;
@@ -276,7 +282,7 @@ hr{
 }
 .title{
     position: relative;
-    top:1vw;
+    top:2rem;
     display:flex;
     flex-direction: column;
     text-align: center;
@@ -329,13 +335,11 @@ hr{
     transition: 0.2s ease-in-out !important;
     opacity:100 !important;
     pointer-events: all !important;
-    z-index:10;
 }
 .hidebuttons{
     transition: 0.2s ease-in-out !important;
     opacity:0 !important;
     pointer-events: none !important;
-    z-index:-10;
 }
 
 .project-buttons>p{
@@ -373,7 +377,6 @@ hr{
 .showmodal{
     opacity:100 !important;
     transition: 0.4s ease-in-out;
-    z-index:10;
     pointer-events: all !important;
 }
 
@@ -399,6 +402,7 @@ hr{
     opacity:0;
     pointer-events: none;
     transition: 0.4s ease-in-out;
+    z-index:1;
 }
 .modal{
     width:55vw;
@@ -411,6 +415,7 @@ hr{
     align-items:center;
     padding-left:1vw;
     position: relative;
+    z-index:1;
 }
 .exit{
     position:absolute;
@@ -423,7 +428,7 @@ hr{
     color:#94A4B4;
 }
 .exit:hover{
-    color:white;
+    color:#F0F7EE;
 }
 
 
@@ -434,7 +439,7 @@ hr{
 }
 .modal-info>h2{
     font-size:1.5vw;
-    color:white;
+    color:#F0F7EE;
     font-family: 'Oswald', sans-serif;
 }
 .modal-about>p{
@@ -519,9 +524,6 @@ hr{
 }
 
 
-
-
-
 /*------------------------------------ Footer -------------------------------------*/
 
 .footer{
@@ -529,8 +531,8 @@ hr{
     font-family: 'Inconsolata', monospace;
     width:100%;
     height:3vw;
-    background-color: #017c3d;
-    color:white;
+    background-color: #731022;
+    color:#F0F7EE;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -629,7 +631,7 @@ hr{
         border:rgb(199, 199, 199) solid 0.4vw;
     }
     .languages>a>img:hover{
-        border:rgb(235, 182, 36) solid 0.4vw !important;
+        border:#FFBD00 solid 0.4vw !important;
     }
     .nav{
         opacity:0;
@@ -642,7 +644,7 @@ hr{
         justify-content: center;
     }
     .selectedlang{
-        border:rgb(235, 182, 36) solid 0.4vw !important;
+        border:#FFBD00 solid 0.4vw !important;
     }
     .hamburger-nav-button{
         opacity:100;
@@ -725,7 +727,6 @@ hr{
         height:8vw;
         background-color: #82909E;
         color:#22262A;
-        z-index:1;
         opacity: 100;
         box-shadow: 0px 0px 12px 3px #000000;
     }
@@ -737,13 +738,11 @@ hr{
         transition: none;
         opacity:100 !important;
         pointer-events: all !important;
-        z-index:1;
     }
     .hidebuttons{
         transition: none;
         opacity:100 !important;
         pointer-events: all !important;
-        z-index:1;
     }
 
     .project-buttons>button{
@@ -751,7 +750,7 @@ hr{
         width:15vw;
         margin-top:0px;
         height:6vw;
-        color:white;
+        color:#F0F7EE;
         background-color:#22262A;
         border:none;
     }
@@ -765,13 +764,10 @@ hr{
         background-size:100%;
 
     }
-
-    .modal-background{
-        z-index:2;
-    }
     .modal{
-        overflow:scroll;
-        width:82%;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        width:85%;
         height:95vh;
         flex-direction: column;
         justify-content: start;
@@ -780,7 +776,6 @@ hr{
         position:relative;
         align-self: end;
         border:none;
-        z-index:10;
         font-size:6vw;
     }
 
@@ -843,7 +838,6 @@ hr{
     .header{
         height:10vw;
         gap:30vw;
-        z-index:100;
         
     }
     .languages{
@@ -863,8 +857,6 @@ hr{
         width:8vw;
     }
     
-
-
     .about{
         height: 95vh;
         gap:2vw;
@@ -875,7 +867,7 @@ hr{
         flex-direction: column;
         gap:0vw;
         height:auto;
-        font-size:6vw;
+        font-size:2rem;
     }
     .about-image>img{
         height:30vw;
@@ -893,22 +885,19 @@ hr{
         bottom:-1vw;
         margin-bottom:5vw;
         justify-content: start;
-        font-size:6vw;
+        font-size:1.5rem;
     }
     .contacts{
-        gap:8vw;
+        gap:1.5rem;
+    }
+    .title{
+        top:3rem;
     }
     .project-container{
         height:auto;
         padding-top:2vw;
         padding-bottom:2vw;
-        gap:5vw;
     }
-    .row{
-        height:110vw;
-        gap:7vw;
-    }
-
     .project{
         width:85vw;
         height: 50vw;
@@ -926,6 +915,7 @@ hr{
     .project-buttons>button:hover{
         background-color:#1c1f22;
     }
+  
 
     .modal{
         width:100%;
@@ -985,14 +975,6 @@ hr{
 }
 
 /*------------------------------------ Keyframes -------------------------------------*/
-
-@keyframes navon{
-    100%{height:100%;}
-}
-@keyframes navoff{
-    0%{height:100%;}
-    100%{height:0%;}
-}
 @keyframes shownav{
     0%{transform:translateY(-50vw);}
     100%{transform:translateY(0vw);}
@@ -1002,20 +984,21 @@ hr{
     100%{transform:translateY(-50vw);}
 }
 @keyframes shadowon{
-    0%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82);}
-    20%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82);}
-    40%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82);}
-    60%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82);}
-    80%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82);}
-    100%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82);}
+    
+    0%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    20%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    40%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    60%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    80%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    100%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
 }
 @keyframes shadowoff{
-    0%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82);}
-    20%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82);}
-    40%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82);}
-    60%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82);}
-    80%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82);}
-    100%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82);}
+    0%{box-shadow: inset 0px 0px 46px 35px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    20%{box-shadow: inset 0px 0px 46px 28px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    40%{box-shadow: inset 0px 0px 46px 21px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    60%{box-shadow: inset 0px 0px 46px 14px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    80%{box-shadow: inset 0px 0px 46px 7px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
+    100%{box-shadow: inset 0px 0px 46px 0px rgba(0,0,0,0.82), 0px 0px 12px 3px #000000, 0px 0px 12px 3px #000000;}
 }
 @keyframes popup{
     0%{transform: scale(0.4);}
