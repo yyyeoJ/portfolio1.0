@@ -1,3 +1,5 @@
+//TODO: intersection observer animation
+
 //Hamburger nav button & menu
 const body = document.querySelector("body");
 const hamburgerLink = document.querySelectorAll(".hamburgerlink");

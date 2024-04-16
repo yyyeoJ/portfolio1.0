@@ -222,7 +222,8 @@ a, a:link,a:visited,a:active{
     align-items: center;
 }
 .about-image>img{
-    border-radius:50%;
+    border-radius:5%;
+    border:5px solid white;
     height:15vw;
 }
 .about-text{
@@ -238,7 +239,7 @@ hr{
     position: relative;
     bottom:4vw;
     border-radius:30px;
-    width:35vw;
+    width:40vw;
     height:0.5vw;
 }
 .contact-me{
