@@ -84,3 +84,30 @@ for(let i = 0; i<modal.length;i++){
         body.classList.remove("scrollock")
     })
 }
+
+//intersection observer
+
+let observer1 = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+    if(entry.isIntersecting){
+    entry.target.classList.add("appearFromLeft")
+    }
+    })
+    
+},{threshold:0.3});
+
+document.querySelectorAll(".about-text>p").forEach(entry=>{observer1.observe(entry);})
+
+let observer2 = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+    if(entry.isIntersecting){
+    entry.target.classList.add("appearFromBelow")
+    }
+    })
+    
+},{threshold:0.3});
+
+document.querySelectorAll(".contact-me>p").forEach(entry=>{observer2.observe(entry);})
+document.querySelectorAll(".about-image").forEach(entry=>{observer2.observe(entry);})
+document.querySelectorAll(".contact").forEach(entry=>{observer2.observe(entry);})
+document.querySelectorAll(".title").forEach(entry=>{observer2.observe(entry);})
