@@ -62,7 +62,12 @@ a, a:link,a:visited,a:active{
     top:2rem;
 }
 
-
+.project{
+    position: relative;
+    opacity: 0;
+    transition: 0.8s ease-in-out;
+    top:2rem;
+}
 
 
 
