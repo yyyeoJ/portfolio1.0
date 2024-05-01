@@ -101,6 +101,14 @@ document.querySelectorAll(".about-text>p").forEach(entry=>{observer1.observe(ent
 let observer2 = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
     if(entry.isIntersecting){
+
+        if(entry.target.classList.contains("contact")){
+            setTimeout(() => {
+                entry.target.classList.remove("transitionDelay")
+            }, 2100);
+        }
+
+
     entry.target.classList.add("appearFromBelow")
     }   
     })

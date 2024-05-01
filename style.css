@@ -312,21 +312,24 @@ hr{
     align-items: center;
     gap:0.5vw;
     height:5vw;
-    transition-property: transform;
     transition: 0.4s ease-in-out;
     position: relative;
     opacity: 0;
     top:2rem;
-    transition-delay: 1.2s;
 }
 
-.contacts>.contact:nth-child(1){
+.contact:hover{
+    transform: translateY(-0.5rem);
+}
+
+
+.contacts>.transitionDelay:nth-child(1){
     transition-delay: 1.7s;
 }
-.contacts>.contact:nth-child(2){
+.contacts>.transitionDelay:nth-child(2){
     transition-delay: 1.9s;
 }
-.contacts>.contact:nth-child(3){
+.contacts>.transitionDelay:nth-child(3){
     transition-delay: 2.1s;
 }
 
