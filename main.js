@@ -120,3 +120,4 @@ document.querySelectorAll(".about-image").forEach(entry=>{observer2.observe(entr
 document.querySelectorAll(".title").forEach(entry=>{observer2.observe(entry);})
 document.querySelectorAll(".project").forEach(entry=>{observer2.observe(entry);})
 document.querySelectorAll(".contact").forEach(entry=>{observer2.observe(entry);})
+document.querySelectorAll(".signature").forEach(entry=>{observer2.observe(entry);})

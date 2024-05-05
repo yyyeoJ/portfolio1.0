@@ -30,6 +30,17 @@ a, a:link,a:visited,a:active{
     top:2rem;
 }
 
+.signature{
+    width:10rem;
+    height: auto;
+    position: relative;
+    opacity: 0;
+    transition: 0.8s ease-in-out;
+    top:2rem;
+    transition-delay: 1.7s;
+    margin-top:1rem;
+}
+
 
 .about-text>p{
     position: relative;
@@ -263,7 +274,7 @@ a, a:link,a:visited,a:active{
     display: flex;
     flex-direction: row;
     gap:2vw;
-    height:25vw;
+    margin-bottom:1rem;
 }
 .about-image{
     
@@ -286,8 +297,7 @@ a, a:link,a:visited,a:active{
 hr{
     color:#F0F7EE;
     background-color: #F0F7EE;
-    position: relative;
-    bottom:4vw;
+    
     border-radius:30px;
     width:40vw;
     height:0.5vw;
@@ -729,16 +739,9 @@ hr{
     }
     .about-container{
         gap:5vw;
-        height:45vw;
         align-items: center;
         justify-content: center;
         position: relative;
-        bottom:5vw;
-    }
-    .hr-div{
-        display:flex;
-        justify-content: center;
-        position:relative;
         bottom:5vw;
     }
     .about-image>img{
@@ -928,7 +931,6 @@ hr{
         position: relative;
     }
     .about-container{
-        bottom:-2vw;
         flex-direction: column;
         gap:0vw;
         height:auto;
@@ -939,10 +941,6 @@ hr{
     }
     .about-text{
         align-items: center;
-    }
-    .hr-div{
-        bottom:-8vw;
-        height:5vw;
     }
     .contact-me{
         height:auto;
