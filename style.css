@@ -335,16 +335,12 @@ hr{
 
 }
 .title{
-    position: relative;
-    top:2rem;
     display:flex;
     flex-direction: column;
     text-align: center;
     text-shadow: 5px 4px 4px #000000;
-}
-.title>hr{
-    bottom:-1vw;
     margin-bottom:5rem;
+    margin-top:5rem;
 }
 
 .project-container{
@@ -510,7 +506,7 @@ hr{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:0.5vw;
+    gap:0.2rem;
     overflow:auto;
 }
 
@@ -522,10 +518,13 @@ hr{
     border:2px solid #22262A;
     width:auto;
     height:1.5vw;
-    padding:0.5vw;
     display:flex;
     align-items: center;
     justify-content: center;
+    padding-left:0.1rem;
+    padding-right: 0.1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }
 
 .modal-image>{
@@ -550,9 +549,10 @@ hr{
 .modal-about{
     width:100%;
     height:13vw;
-    margin-bottom:0.5vw;
     overflow-y:auto;
-    padding:0.2vw 0.2vw 0.2vw 0;
+    padding-left:0.5rem;
+    padding-right: 0.5rem;
+    border:2px solid #22262A;
 }
 .modal-buttons{
     display:flex;
@@ -564,12 +564,13 @@ hr{
     font-size:1vw;
     width:auto;
     padding:0.8rem;
-    height:1.5vw;
+    height:1rem;
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap:0.3vw;
+    margin-top:0.4rem;
 }
 .modal-buttons>button>a{
     color:black;
@@ -662,6 +663,11 @@ hr{
         width:auto;
         height:2vw;
         font-size:1.5vw;
+    }
+
+    .title{
+        margin-bottom:2rem;
+        margin-top:2rem;
     }
 
 }
@@ -773,9 +779,6 @@ hr{
         font-size:3vw;
         padding-bottom:5rem;
     
-    }
-    .title>hr{
-        bottom:0vw;
     }
 
     .project-container{
@@ -908,6 +911,12 @@ hr{
         margin:auto;
         height:7vw;
     }
+
+    .title{
+        margin-bottom:1rem;
+        margin-top:1rem;
+    }
+
 }
 
 @media(max-width:650px){
@@ -999,9 +1008,6 @@ hr{
 
     
 
-    .title{
-        top:3rem;
-    }
     .project-container{
         height:auto;
         padding-top:2vw;
